@@ -1,4 +1,4 @@
-    class Fournisseur extends Informations_personnelles {
+    class Fournisseur extends Information_personnelle {
         Activite activite;
         ArrayList<Vente> ventes = new ArrayList<>();
         Materiel materiel;
