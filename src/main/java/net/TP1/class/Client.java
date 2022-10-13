@@ -1,4 +1,4 @@
-class Client extends Information_personnel {
+class Client extends Informations_personnelles {
     Bool privilegie = false;
     ArrayList<Activite> activites;
 
