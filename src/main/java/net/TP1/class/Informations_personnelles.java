@@ -1,4 +1,4 @@
-class Information_personnel {
+class Informations_personnelles {
     String nom;
     String prenom;
     String adresse;
