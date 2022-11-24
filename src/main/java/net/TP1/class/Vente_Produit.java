@@ -3,7 +3,7 @@ class Vente_Produit {
     private Taille taille;
     private Produit produit;
 
-    Vente_Produit(Integer quantite, Taille taille, Produit produit){
+    public Vente_Produit(Integer quantite, Taille taille, Produit produit){
         this.quantite = quantite;
         this.taille = taille;
         this.produit = produit;

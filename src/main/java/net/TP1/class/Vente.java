@@ -5,14 +5,14 @@
 //The Produit object has a name, a price, a category, and a description.
 
 class Vente {
-    String nom;
-    DateTime date_debut;
-    DateTime date_fin;
-    String description;
-    ArrayList<Activite> activites;
-    ArrayList<Vente_Produit> venteProduit;
+    private String nom;
+    private Date date_debut;
+    private Date date_fin;
+    private String description;
+    private ArrayList<Activite> activites;
+    private ArrayList<Vente_Produit> venteProduit;
 
-    Vente(String nom, DateTime date_debut, DateTime date_fin, String description, ArrayList<Vente_Produit> venteProduit, ArrayList<Activite> activites) {
+    public Vente(String nom, Date date_debut, Date date_fin, String description, ArrayList<Vente_Produit> venteProduit, ArrayList<Activite> activites) {
         if (nom == null) {
             throw new IllegalArgumentException("nom cannot be null");
         }
@@ -39,68 +39,68 @@ class Vente {
         this.venteProduit = venteProduit;
     }
 
-    void setNom(String nom) {
+    public void setNom(String nom) {
         if (nom == null) {
             throw new IllegalArgumentException("nom cannot be null");
         }
         this.nom = nom;
     }
 
-    String getNom() {
+    public String getNom() {
         return this.nom;
     }
 
-    void setDate_debut(DateTime date_debut) {
+    public void setDate_debut(Date date_debut) {
         if (date_debut == null) {
             throw new IllegalArgumentException("date_debut cannot be null");
         }
         this.date_debut = date_debut;
     }
 
-    DateTime getDate_debut() {
+    public Date getDate_debut() {
         return this.date_debut;
     }
 
-    void setDate_fin(DateTime date_fin) {
+    public void setDate_fin(Date date_fin) {
         if (date_fin == null) {
             throw new IllegalArgumentException("date_fin cannot be null");
         }
         this.date_fin = date_fin;
     }
 
-    DateTime getDate_fin() {
+    public Date getDate_fin() {
         return this.date_fin;
     }
 
-    void setDescription(String description) {
+    public void setDescription(String description) {
         if (description == null) {
             throw new IllegalArgumentException("description cannot be null");
         }
         this.description = description;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
-    void setActivites(ArrayList<Activite> activites) {
+    public void setActivites(ArrayList<Activite> activites) {
         if (activites == null) {
             throw new IllegalArgumentException("activites cannot be null");
         }
         this.activites = activites;
     }
 
-    ArrayList<Activite> getActivites() {
+    public ArrayList<Activite> getActivites() {
         return this.activites;
     }
 
-    void setVenteProduit(ArrayList<Vente_Produit> venteProduit) {
+    public void setVenteProduit(ArrayList<Vente_Produit> venteProduit) {
         if (venteProduit == null) {
             throw new IllegalArgumentException("venteProduit cannot be null");
         }
         this.venteProduit = venteProduit;
     }
-    ArrayList<Vente_Produit> getVenteProduit() {
+    public ArrayList<Vente_Produit> getVenteProduit() {
         return this.venteProduit;
     }
 }

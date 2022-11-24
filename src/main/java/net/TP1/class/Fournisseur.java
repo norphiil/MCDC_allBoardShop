@@ -2,33 +2,19 @@
 // This class represents a supplier.
 // It is a subclass of Utilisateur (User).
 
-public class Vente {
-    private Fournisseur fournisseur;
+public class Fournisseur extends Utilisateur {
     private Materiel materiel;
     private int quantite;
-    private Date dateVente;
+    private ArrayList<Vente> ventes;
 
-    public Vente(Fournisseur fournisseur, Materiel materiel, int quantite, Date dateVente) {
-        if (fournisseur == null || materiel == null || dateVente == null || quantite <= 0) {
+    public Fournisseur(Materiel materiel, int quantite, ArrayList<Vente> ventes) {
+        if (materiel == null || quantite <= 0) {
             throw new IllegalArgumentException();
         }
 
-        this.fournisseur = fournisseur;
         this.materiel = materiel;
         this.quantite = quantite;
-        this.dateVente = dateVente;
-    }
-
-    public void setFournisseur(Fournisseur fournisseur) {
-        if (fournisseur == null) {
-            throw new IllegalArgumentException();
-        }
-
-        this.fournisseur = fournisseur;
-    }
-
-    public Fournisseur getFournisseur() {
-        return this.fournisseur;
+        this.ventes = ventes;
     }
 
     public void setMateriel(Materiel materiel) {
@@ -55,15 +41,11 @@ public class Vente {
         return this.quantite;
     }
 
-    public void setDateVente(Date dateVente) {
-        if (dateVente == null) {
-            throw new IllegalArgumentException();
-        }
-
-        this.dateVente = dateVente;
+    public void setVentes(ArrayList<Vente> ventes) {
+        this.ventes = ventes;
     }
 
-    public Date getDateVente() {
-        return this.dateVente;
+    public ArrayList<Vente> getVentes() {
+    return this.ventes;
     }
 }
