@@ -1,4 +1,4 @@
-class Client extends Information_personnel {
+class Client extends Utilisateur {
     Bool privilegie = false;
     ArrayList<Activite> activites;
 
@@ -15,5 +15,17 @@ class Client extends Information_personnel {
         this.super(nom, prenom, adresse, mail, tel);
         this.privilegie = privilegie;
         this.activites = activites;
+    }
+    void setPrivilegie(Bool privilegie) {
+        this.privilegie = privilegie;
+    }
+    Bool getPrivilegie() {
+        return this.privilegie;
+    }
+    void setActivites(ArrayList<Activite> activites) {
+        this.activites = activites;
+    }
+    ArrayList<Activite> getActivites() {
+        return this.activites;
     }
 }

@@ -1,4 +1,4 @@
-    class Fournisseur extends Information_personnel {
+    class Fournisseur extends Utilisateur {
         Activite activite;
         ArrayList<Vente> ventes = new ArrayList<>();
         Materiel materiel;
@@ -17,5 +17,23 @@
             this.activite = activite;
             this.ventes = ventes;
             this.materiel = materiel;
+        }
+        void setActivite(Activite activite) {
+            this.activite = activite;
+        }
+        Activite getActivite() {
+            return this.activite;
+        }
+        void setVentes(ArrayList<Vente> ventes) {
+            this.ventes = ventes;
+        }
+        ArrayList<Vente> getVentes() {
+            return this.ventes;
+        }
+        void setMateriel(Materiel materiel) {
+            this.materiel = materiel;
+        }
+        Materiel getMateriel() {
+            return this.materiel;
         }
     }

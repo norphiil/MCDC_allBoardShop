@@ -8,4 +8,22 @@ class Vente_Produit {
         this.taille = taille;
         this.produits = produits;
     }
+    void setQuantite(Integer quantite) {
+        this.quantite = quantite;
+    }
+    Integer getQuantite() {
+        return this.quantite;
+    }
+    void setTaille(Taille taille) {
+        this.taille = taille;
+    }
+    Taille getTaille() {
+        return this.taille;
+    }
+    void setProduits(ArrayList<Produits> produits) {
+        this.produits = produits;
+    }
+    ArrayList<Produits> getProduits() {
+        return this.produits;
+    }
 }
