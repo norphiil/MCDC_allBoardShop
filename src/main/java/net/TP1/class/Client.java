@@ -1,31 +1,34 @@
-class Client extends Utilisateur {
-    Bool privilegie = false;
-    ArrayList<Activite> activites;
+// This code initializes the client class
+// The client class inherits from the Utilisateur class
+// The client class is used to store information about a client
+public class Client extends Utilisateur {
+    private boolean privileged;
+    private ArrayList<Activite> activities;
 
-    Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites){
+    public Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites){
         this(nom, prenom, adresse, mail, null, false, activites);
     }
-    Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites, String tel){
+    public Client(String nom, String prenom, String adresse, String mail, String tel, ArrayList<Activite> activites){
         this(nom, prenom, adresse, mail, tel, false, activites);
     }
-    Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites, Bool privilegie){
+    public Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites, boolean privilegie){
         this(nom, prenom, adresse, mail, null, privilegie, activites);
     }
-    Client(String nom, String prenom, String adresse, String mail, ArrayList<Activite> activites, String tel, Bool privilegie){
-        this.super(nom, prenom, adresse, mail, tel);
-        this.privilegie = privilegie;
-        this.activites = activites;
+    public Client(String nom, String prenom, String adresse, String mail, String tel, ArrayList<Activite> activites, boolean privilegie){
+        super(nom, prenom, adresse, mail, tel);
+        this.privileged = privilegie;
+        this.activities = activites;
     }
-    void setPrivilegie(Bool privilegie) {
-        this.privilegie = privilegie;
+    public void setPrivilegie(boolean privilegie) {
+        this.privileged = privilegie;
     }
-    Bool getPrivilegie() {
-        return this.privilegie;
+    public boolean getPrivilegie() {
+        return this.privileged;
     }
-    void setActivites(ArrayList<Activite> activites) {
-        this.activites = activites;
+    public void setActivites(ArrayList<Activite> activites) {
+        this.activities = activites;
     }
-    ArrayList<Activite> getActivites() {
-        return this.activites;
+    public ArrayList<Activite> getActivites() {
+        return this.activities;
     }
 }

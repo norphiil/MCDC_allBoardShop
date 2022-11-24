@@ -1,39 +1,69 @@
-    class Fournisseur extends Utilisateur {
-        Activite activite;
-        ArrayList<Vente> ventes = new ArrayList<>();
-        Materiel materiel;
 
-        Fournisseur(String nom, String prenom, String adresse, String mail, Materiel materiel, Activite activite){
-            this(nom, prenom, adresse, mail, materiel, activite, null, null);
+// This class represents a supplier.
+// It is a subclass of Utilisateur (User).
+
+public class Vente {
+    private Fournisseur fournisseur;
+    private Materiel materiel;
+    private int quantite;
+    private Date dateVente;
+
+    public Vente(Fournisseur fournisseur, Materiel materiel, int quantite, Date dateVente) {
+        if (fournisseur == null || materiel == null || dateVente == null || quantite <= 0) {
+            throw new IllegalArgumentException();
         }
-        Fournisseur(String nom, String prenom, String adresse, String mail, Materiel materiel, Activite activite, String tel){
-            this(nom, prenom, adresse, mail, materiel, activite, tel, null);
-        }
-        Fournisseur(String nom, String prenom, String adresse, String mail, Materiel materiel, Activite activite, ArrayList<Vente> ventes){
-            this(nom, prenom, adresse, mail, materiel, activite, null, ventes);
-        }
-        Fournisseur(String nom, String prenom, String adresse, String mail, Materiel materiel, Activite activite, String tel, ArrayList<Vente> ventes){
-            this.super(nom, prenom, adresse, mail, tel);
-            this.activite = activite;
-            this.ventes = ventes;
-            this.materiel = materiel;
-        }
-        void setActivite(Activite activite) {
-            this.activite = activite;
-        }
-        Activite getActivite() {
-            return this.activite;
-        }
-        void setVentes(ArrayList<Vente> ventes) {
-            this.ventes = ventes;
-        }
-        ArrayList<Vente> getVentes() {
-            return this.ventes;
-        }
-        void setMateriel(Materiel materiel) {
-            this.materiel = materiel;
-        }
-        Materiel getMateriel() {
-            return this.materiel;
-        }
+
+        this.fournisseur = fournisseur;
+        this.materiel = materiel;
+        this.quantite = quantite;
+        this.dateVente = dateVente;
     }
+
+    public void setFournisseur(Fournisseur fournisseur) {
+        if (fournisseur == null) {
+            throw new IllegalArgumentException();
+        }
+
+        this.fournisseur = fournisseur;
+    }
+
+    public Fournisseur getFournisseur() {
+        return this.fournisseur;
+    }
+
+    public void setMateriel(Materiel materiel) {
+        if (materiel == null) {
+            throw new IllegalArgumentException();
+        }
+
+        this.materiel = materiel;
+    }
+
+    public Materiel getMateriel() {
+        return this.materiel;
+    }
+
+    public void setQuantite(int quantite) {
+        if (quantite <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        this.quantite = quantite;
+    }
+
+    public int getQuantite() {
+        return this.quantite;
+    }
+
+    public void setDateVente(Date dateVente) {
+        if (dateVente == null) {
+            throw new IllegalArgumentException();
+        }
+
+        this.dateVente = dateVente;
+    }
+
+    public Date getDateVente() {
+        return this.dateVente;
+    }
+}

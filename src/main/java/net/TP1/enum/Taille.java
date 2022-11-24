@@ -1,2 +1,2 @@
-    enum Taille {
-    }
+enum Taille {
+}

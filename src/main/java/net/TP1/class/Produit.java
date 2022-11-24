@@ -1,45 +1,74 @@
-class Produit {
-    String nom;
-    String description;
-    String photo;
-    Float prix_base;
-    Float prix_vente;
+// This is a class that represents a product. It contains
+// the name of the product and the price.
 
-    Produit(String nom, String description, String photo, Float prix_base, Float prix_vente){
-        this.nom = nom;
-        this.description = description;
-        this.photo = photo;
-        this.prix_base = prix_base;
-        this.prix_vente = prix_vente;
+public class Produit {
+
+    private String nom;
+    private String description;
+    private String photo;
+    private Float prixBase;
+    private Float prixVente;
+
+    public Produit(String nom, String description, String photo, Float prixBase, Float prixVente) {
+        this.setNom(nom);
+        this.setDescription(description);
+        this.setPhoto(photo);
+        this.setPrixBase(prixBase);
+        this.setPrixVente(prixVente);
     }
-    void setNom(String nom) {
+
+    public void setNom(String nom) {
+        if (nom == null) {
+            throw new IllegalArgumentException("nom is null");
+        }
         this.nom = nom;
     }
-    String getNom() {
+
+    public String getNom() {
         return this.nom;
     }
-    void setDescription(String description) {
+
+    public void setDescription(String description) {
+        if (description == null) {
+            throw new IllegalArgumentException("description is null");
+        }
         this.description = description;
     }
-    String getDescription() {
+
+    public String getDescription() {
         return this.description;
     }
-    void setPhoto(String photo) {
+
+    public void setPhoto(String photo) {
+        if (photo == null) {
+            throw new IllegalArgumentException("photo is null");
+        }
         this.photo = photo;
     }
-    String getPhoto() {
+
+    public String getPhoto() {
         return this.photo;
     }
-    void setPrix_base(Float prix_base) {
-        this.prix_base = prix_base;
+
+    public void setPrixBase(Float prixBase) {
+        if (prixBase == null) {
+            throw new IllegalArgumentException("prixBase is null");
+        }
+        this.prixBase = prixBase;
     }
-    Float getPrix_base() {
-        return this.prix_base;
+
+    public Float getPrixBase() {
+        return this.prixBase;
     }
-    void setPrix_vente(Float prix_vente) {
-        this.prix_vente = prix_vente;
+
+    public void setPrixVente(Float prixVente) {
+        if (prixVente == null) {
+            throw new IllegalArgumentException("prixVente is null");
+        }
+        this.prixVente = prixVente;
     }
-    Float getPrix_vente() {
-        return this.prix_vente;
+
+    public Float getPrixVente() {
+        return this.prixVente;
     }
 }

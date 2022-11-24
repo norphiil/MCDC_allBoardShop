@@ -1,29 +1,29 @@
 class Vente_Produit {
-    Integer quantite;
-    Taille taille;
-    ArrayList<Produits> produits = new ArrayList<>();
+    private Integer quantite;
+    private Taille taille;
+    private Produit produit;
 
-    Vente_Produit(Integer quantite, Taille taille, ArrayList<Produits> produits){
+    Vente_Produit(Integer quantite, Taille taille, Produit produit){
         this.quantite = quantite;
         this.taille = taille;
-        this.produits = produits;
+        this.produit = produit;
     }
-    void setQuantite(Integer quantite) {
+    public void setQuantite(Integer quantite) {
         this.quantite = quantite;
     }
-    Integer getQuantite() {
+    public Integer getQuantite() {
         return this.quantite;
     }
-    void setTaille(Taille taille) {
+    public void setTaille(Taille taille) {
         this.taille = taille;
     }
-    Taille getTaille() {
+    public Taille getTaille() {
         return this.taille;
     }
-    void setProduits(ArrayList<Produits> produits) {
-        this.produits = produits;
+    public void setProduit(Produit produit) {
+        this.produit = produit;
     }
-    ArrayList<Produits> getProduits() {
+    public Produit getProduit() {
         return this.produits;
     }
 }
