@@ -1,4 +1,3 @@
-
 // This class represents a supplier.
 // It is a subclass of Utilisateur (User).
 
@@ -46,6 +45,6 @@ public class Fournisseur extends Utilisateur {
     }
 
     public ArrayList<Vente> getVentes() {
-    return this.ventes;
+        return this.ventes;
     }
 }

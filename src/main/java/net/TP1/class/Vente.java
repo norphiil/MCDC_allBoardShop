@@ -12,7 +12,8 @@ class Vente {
     private ArrayList<Activite> activites;
     private ArrayList<Vente_Produit> venteProduit;
 
-    public Vente(String nom, Date date_debut, Date date_fin, String description, ArrayList<Vente_Produit> venteProduit, ArrayList<Activite> activites) {
+    public Vente(String nom, Date date_debut, Date date_fin, String description, ArrayList<Vente_Produit> venteProduit,
+            ArrayList<Activite> activites) {
         if (nom == null) {
             throw new IllegalArgumentException("nom cannot be null");
         }
@@ -100,6 +101,7 @@ class Vente {
         }
         this.venteProduit = venteProduit;
     }
+
     public ArrayList<Vente_Produit> getVenteProduit() {
         return this.venteProduit;
     }
